@@ -57,8 +57,8 @@ const corsHeaders = {
 }
 function checkURL(URL) {
 	var str=URL;
-	//判断URL地址的正则表达式为:http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?
-	//下面的代码中应用了转义字符"\"输出一个字符"/"
+	// URL လိပ်စာကို ဆုံးဖြတ်ရန် ပုံမှန်ဖော်ပြချက်မှာ- http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=] *)?
+//အောက်ပါကုဒ်သည် စာလုံးတစ်လုံးကို ထုတ်ရန် "\" ကို အသုံးပြုသည်။
 	var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
 	var objExp=new RegExp(Expression);
 	if(objExp.test(str)==true){
@@ -68,7 +68,7 @@ function checkURL(URL) {
 	}
 }
 function ReturnError() {
-	let response = new Response("参数错误", {
+	let response = new Response("ကန့်သတ်ချက် အမှား", {
           status: 405,
           statusText: 'Method Not Allowed',
         })
